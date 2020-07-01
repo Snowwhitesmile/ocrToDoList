@@ -59,7 +59,13 @@ describe('controller', function () {
 	});
 
 	it('should show entries on start-up', function () {
-		// TODO: write test
+		// Test added here ????
+		var todo = {title: 'my todo'};
+			setUpModel([todo]);
+
+			subject.setView('#/');
+
+			expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
 	});
 
 	describe('routing', function () {
@@ -83,11 +89,23 @@ describe('controller', function () {
 		});
 
 		it('should show active entries', function () {
-			// TODO: write test
+			// Test added here
+			var todo = {title: 'my todo'};
+			setUpModel([todo]);
+
+			subject.setView('/active');
+
+			expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
 		});
 
 		it('should show completed entries', function () {
-			// TODO: write test
+			// Test added here
+			var todo = {title: 'my todo'};
+			setUpModel([todo]);
+
+			subject.setView('/completed');
+
+			expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
 		});
 	});
 
@@ -134,7 +152,7 @@ describe('controller', function () {
 	});
 
 	it('should highlight "All" filter by default', function () {
-		// TODO: write test
+		// Test added here ???
 	});
 
 	it('should highlight "Active" filter when switching to active view', function () {
@@ -193,7 +211,7 @@ describe('controller', function () {
 
 	describe('element removal', function () {
 		it('should remove an entry from the model', function () {
-			// TODO: write test
+			// Test added here
 			var todo = {id: 42, title: 'my todo', completed: true};
 			setUpModel([todo]);
 
