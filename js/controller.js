@@ -100,7 +100,7 @@
 		}
 
 		self.model.create(title, function () {
-			self.view.render('clearNewTodo');
+			self.view.render('clearNewTodo'); 
 			self._filter(true);
 		});
 	};
@@ -162,11 +162,10 @@
 			items = data;
 		});
 
-		items.forEach(function(item) {
-			if (item.id === id) {
-				console.log("Element with ID: " + id + " has been removed.");
-			}
-		});
+		// items.forEach(function(item) {
+		// 	if (item.id === id) {
+		// 	}
+		// });
 
 		self.model.remove(id, function () {
 			self.view.render('removeItem', id);
