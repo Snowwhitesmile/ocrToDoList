@@ -59,7 +59,7 @@ describe('controller', function () {
 	});
 
 	it('should show entries on start-up', function () {
-		// Test added here ????
+		// Test added here
 		var todo = {title: 'my todo'};
 			setUpModel([todo]);
 
@@ -152,8 +152,8 @@ describe('controller', function () {
 	});
 
 	it('should highlight "All" filter by default', function () {
-		// Test added here ???
-		var todo = {id: 42, title: 'my todo', completed: true}; //completed true et false ? -> testet avec une liste
+		// Test added here
+		var todo = {id: 42, title: 'my todo', completed: true};
 		setUpModel([todo]);
 
 		subject.setView('');
@@ -162,7 +162,7 @@ describe('controller', function () {
 	});
 
 	it('should highlight "Active" filter when switching to active view', function () {
-		// Test added here ??
+		// Test added here
 		var todo = {id: 42, title: 'my todo', completed: false}; 
 		setUpModel([todo]);
 
@@ -185,7 +185,7 @@ describe('controller', function () {
 		});
 
 		it('should update the view', function () {
-			// TODO: write test
+			// Test added here
 			var todo = {id: 42, title: 'my todo', completed: false}; 
 			var completed = {completed: true};
 			setUpModel([todo]);
@@ -205,7 +205,7 @@ describe('controller', function () {
 
 			subject.setView('');
 
-			view.trigger('newTodo', newTodo); //voir la methode create du controller ?
+			view.trigger('newTodo', newTodo);
 			expect(model.create).toHaveBeenCalledWith(newTodo, jasmine.any(Function));
 		
 		});
