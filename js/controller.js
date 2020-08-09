@@ -162,11 +162,6 @@
 			items = data;
 		});
 
-		// items.forEach(function(item) {
-		// 	if (item.id === id) {
-		// 	}
-		// });
-
 		self.model.remove(id, function () {
 			self.view.render('removeItem', id);
 		});
